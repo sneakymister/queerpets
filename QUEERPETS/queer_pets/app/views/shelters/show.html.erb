@@ -1,0 +1,15 @@
+<p><%= @shelter.name %></p>
+
+<h3>Animals</h3>
+<% @animals.each do |a| %>
+	<p><%= link_to a.name, [a.shelter, a] %></p>
+<% end %>
+
+<h2><%= link_to 'new animal', new_shelter_animal_path(@shelter) %></h2>
+
+<h3>Clients</h3>
+<% @clients.each do |c| %>
+  <p><%= link_to c.name, [c.shelter, c] %></p>
+<% end %>
+
+<h2><%= link_to 'new client', new_shelter_client_path(@shelter) %></h2>

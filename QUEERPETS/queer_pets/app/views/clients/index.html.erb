@@ -1,0 +1,7 @@
+<h1>here be clients</h1>
+
+<% @clients.each do |c| %>
+<p><%= link_to c.name, client_path(c) %></p>
+<% end %>
+
+<p><%= link_to 'new client', new_client_path %></p>

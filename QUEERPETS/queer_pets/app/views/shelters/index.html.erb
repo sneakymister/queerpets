@@ -1,0 +1,7 @@
+<p>here be shelters</p>
+
+<% @shelters.each do |sh| %>
+  <p><%= link_to sh.name, shelter_path(sh) %></p>
+<% end %>
+
+<p><%= link_to 'new shelter', new_shelter_path %></p>

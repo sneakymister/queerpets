@@ -1,0 +1,6 @@
+<%= form_for [@shelter, @client] do |c| %>
+  <p>Name: <%= c.text_field :name %></p>
+  <p>Age: <%= c.number_field :age %></p>
+  <p>Shelter: <%= collection_select(:client, :shelter_id, Shelter.all, :id, :name) %></p>
+  <p><%= c.submit %>
+<% end %>

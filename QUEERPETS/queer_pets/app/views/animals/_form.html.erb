@@ -1,0 +1,4 @@
+<%= form_for [@shelter, @animal] do |a| %>
+  <p>Client: <%= collection_select(:animal, :client_id, Client.all, :id, :name) %></p>
+  <p><%= a.submit %>
+<% end %>

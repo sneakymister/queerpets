@@ -1,0 +1,7 @@
+<p>here be animals</p>
+
+<% @animals.each do |a| %>
+  <p><%= link_to a.name, [a.shelter, a] %></p>
+<% end %>
+
+<p><%= link_to 'new animal', new_shelter_animal_path %></p>
